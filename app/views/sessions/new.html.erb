@@ -1,0 +1,17 @@
+<div class="auth">
+  <h1>Sign In</h1>
+
+  <%= form_with url: session_path do |f| %>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, required: true, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password, required: true %>
+    </div>
+
+    <%= f.submit "Sign In" %>
+  <% end %>
+</div>
