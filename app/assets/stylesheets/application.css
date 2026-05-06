@@ -159,13 +159,17 @@ body {
   display: block;
 }
 
-.photo-card__like {
+.photo-card__like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 
-.photo-card__like img {
+.photo-card__like-btn img {
   width: 18px;
   height: 18px;
   display: block;

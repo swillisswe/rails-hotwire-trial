@@ -9,6 +9,10 @@ class Photo < ApplicationRecord
   def liked_by?(user)
     return false unless user
 
-    likes.exists?(user: user)
+    if likes.loaded?
+      likes.any? { |like| like.user_id == user.id }
+    else
+      likes.exists?(user_id: user.id)
+    end
   end
 end

@@ -1,0 +1,13 @@
+<div id="<%= dom_id(photo, :like) %>">
+  <% if photo.liked_by?(current_user) %>
+    <%= button_to photo_like_path(photo), method: :delete, class: "photo-card__like-btn" do %>
+      <%= image_tag "star-fill.svg", alt: "likes" %>
+      <span class="photo-card__like-count"><%= photo.likes.size %></span>
+    <% end %>
+  <% else %>
+    <%= button_to photo_like_path(photo), class: "photo-card__like-btn" do %>
+      <%= image_tag "star-line.svg", alt: "likes" %>
+      <span class="photo-card__like-count"><%= photo.likes.size %></span>
+    <% end %>
+  <% end %>
+</div>

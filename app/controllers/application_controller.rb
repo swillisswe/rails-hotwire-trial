@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def require_login
-    redirect_to new_session_path unless current_user
+    unless current_user
+      redirect_to new_session_path
+      return
+    end
+    response.headers["Cache-Control"] = "no-store"
   end
 end

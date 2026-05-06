@@ -9,10 +9,7 @@
         <%= image_tag "links.svg", alt: "" %>
       </a>
 
-      <div class="photo-card__like">
-        <%= image_tag photo.liked_by?(current_user) ? "star-fill.svg" : "star-line.svg", alt: "likes" %>
-        <span class="photo-card__like-count"><%= photo.likes.size %></span>
-      </div>
+      <%= render "like_button", photo: photo %>
     </div>
   </div>
 </div>
