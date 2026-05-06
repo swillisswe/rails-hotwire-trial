@@ -1,0 +1,18 @@
+<div id="<%= dom_id(photo) %>" class="photo-card">
+  <img src="<%= photo.image_url %>" alt="<%= photo.alt %>" class="photo-card__image">
+
+  <div class="photo-card__footer">
+    <span class="photo-card__photographer"><%= photo.photographer %></span>
+
+    <div class="photo-card__actions">
+      <a href="<%= photo.source_url %>" target="_blank" rel="noopener noreferrer" class="photo-card__link" aria-label="View source">
+        <%= image_tag "links.svg", alt: "" %>
+      </a>
+
+      <div class="photo-card__like">
+        <%= image_tag photo.liked_by?(current_user) ? "star-fill.svg" : "star-line.svg", alt: "likes" %>
+        <span class="photo-card__like-count"><%= photo.likes.size %></span>
+      </div>
+    </div>
+  </div>
+</div>
