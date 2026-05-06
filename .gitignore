@@ -1,0 +1,47 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all environment files (except templates).
+/.env*
+!/.env*.erb
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/.keep
+
+# Ignore storage (SQLite database files and uploaded files in development).
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/.keep
+
+# Ignore assets that are precompiled in production.
+/public/assets
+
+# Ignore master key for credentials.
+/config/master.key
+
+# Ruby / Bundler
+/vendor/bundle
+
+# SQLite databases
+/db/*.sqlite3
+/db/*.sqlite3-*
+
+# Node
+/node_modules
+
+# VS Code
+.vscode/
+
+# Ruby version manager
+.ruby-gemset
+
+# macOS
+.DS_Store
